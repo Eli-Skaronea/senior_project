@@ -15,6 +15,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh "docker run hello-world"
                 sh "python ./Test.py"
             }
         }
